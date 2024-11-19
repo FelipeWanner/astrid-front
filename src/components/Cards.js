@@ -1,9 +1,13 @@
 import React from "react";
 import "../styles.css";
 
-const Cards = ({ action, desc, time }) => {
+const Cards = ({ id, action, desc, time, onDelete }) => {
   return (
     <div className="task">
+      <button className="delete-button" onClick={() => onDelete(id)}>
+        &times;
+      </button>
+
       <div className="task-info">
         <p className="activity">{action}</p>
         <p className="act-text">{desc}</p>
